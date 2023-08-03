@@ -1,0 +1,5 @@
+*[is_ad],
+
+html[foo=bar] {
+	display: none;
+}

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter (X) Adblock",
+  "description": "Block ads on X (the app formerly known as Twitter)",
+  "homepage_url": "https://github.com/lawrencehook/twitter-adblock",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icons/1.png",
+    "64": "icons/2.png",
+    "96": "icons/3.png",
+    "128": "icons/4.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["main.js"],
+      "css": ["main.css"],
+      "matches": ["*://*.twitter.com/*"]
+    }
+  ]
+}
