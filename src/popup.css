@@ -1,0 +1,31 @@
+body {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+}
+
+header {
+	height: 50px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header h1 {
+	font-size: 20px;
+}
+
+header svg {
+	height: 90%;
+}
+
+#settings {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

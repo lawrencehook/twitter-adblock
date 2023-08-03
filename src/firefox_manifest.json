@@ -5,16 +5,38 @@
   "homepage_url": "https://github.com/lawrencehook/twitter-adblock",
   "version": "1.0.0",
   "icons": {
-    "32": "icons/1.png",
-    "64": "icons/2.png",
-    "96": "icons/3.png",
-    "128": "icons/4.png"
+    "32": "icons/32.png",
+    "64": "icons/64.png",
+    "96": "icons/96.png",
+    "128": "icons/128.png",
+    "512": "icons/512.png"
   },
+
   "content_scripts": [
     {
-      "js": ["main.js"],
+      "js": [
+        "shared/main.js",
+        "main.js"
+      ],
       "css": ["main.css"],
       "matches": ["*://*.twitter.com/*"]
     }
+  ],
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Twitter (X) Adblock",
+    "default_icon": {
+      "32": "icons/32.png",
+      "64": "icons/64.png",
+      "96": "icons/96.png",
+      "128": "icons/128.png",
+      "512": "icons/512.png"
+    }
+  },
+
+  "permissions": [
+    "storage"
   ]
+
 }

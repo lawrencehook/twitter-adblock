@@ -1,4 +1,4 @@
-*[is_ad],
+html[global_enable='true'] *[is_ad],
 
 html[foo=bar] {
 	display: none;
