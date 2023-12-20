@@ -18,8 +18,12 @@ function handleStorageChange(changes, area) {
 
 // Add an HTML attribute to ads. Refreshes every 100ms.
 setInterval(markAds, 100);
+const adSelectors = [
+	'article:not([is_ad]) .css-901oao.css-16my406.r-poiln3.r-bcqeeo.r-qvutc0',
+	'article:not([is_ad]) .css-1rynq56.r-bcqeeo.r-qvutc0.r-37j5jr.r-a023e6.r-rjixqe.r-16dba41',
+];
 function markAds() {
-	const adBadges = qsa('.css-901oao.css-16my406.r-poiln3.r-bcqeeo.r-qvutc0').filter(n => n.innerText == 'Ad');
+	const adBadges = adSelectors.flatMap(s => qsa(s)).filter(n => n.innerText == 'Ad');
 	const posts = adBadges.map(node => node.closest('article')).filter(x => x);
 	posts.forEach(node => node.setAttribute('is_ad', ''));
 }
